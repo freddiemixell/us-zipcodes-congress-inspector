@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container flex-col">
+    <h1 class="title">Results</h1>
+    {% for district in districts %}
+        <div class="card">
+            <h2 class="result-title">District: {{ district[0] }} - {{ district[1] }}</h2>
+            <h3 class="result-subtitle">Zip Codes:</h3>
+            <ul class="result-list">
+            {% for zip in district[2] %}
+                <li class="result-item">{{ zip }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+    {% endfor %}
+    <a href="/" class="button mt">Back</a>
+</div>
+{% endblock %}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}Congressional District Lookup{% endblock %}</title>
+    <meta name="description" content="{% block description %}A tool to look up congressional districts by zip code and vice versa.{% endblock %}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    {% block extra_css %}
+    {% endblock %}
+</head>
+<body>
+    {% include "header.html" %}
+
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    {% include "footer.html" %}
+
+    {% block extra_js %}
+    {% endblock %}
+</body>
+</html>
